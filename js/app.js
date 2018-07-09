@@ -1,14 +1,12 @@
-/*
- * Create a list that holds all of your cards
- */
-
+// Create a list that holds all of your cards
+const cardsName = ['fa fa-diamond', 'fa fa-paper-plane-o', 'fa fa-anchor', 'fa fa-bolt', 'fa fa-cube', 'fa fa-anchor', 'fa fa-leaf', 'fa fa-bicycle', 'fa fa-diamond', 'fa fa-bomb', 'fa fa-leaf', 'fa fa-bomb', 'fa fa-bolt', 'fa fa-bicycle', 'fa fa-paper-plane-o', 'fa fa-cube'];
 
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
- */zz
+ */
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -24,6 +22,23 @@ function shuffle(array) {
 
     return array;
 }
+
+// timer - https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
+let time = 0;
+let stop = 0;
+window.onload = function() {
+    setInterval(function() {
+        if (stop !== 1) {
+            time++;
+            $('#timer').html(time);
+        }
+    }, 1000);
+};
+
+// // reset game
+$( ".restart" ).click(function() {
+  location.reload(true);
+});
 
 
 /*
