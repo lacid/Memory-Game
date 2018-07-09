@@ -19,8 +19,6 @@ Each turn:
 * If the cards do not match, both cards are flipped face down.
 * The game ends once all cards have been correctly matched.
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
 ## Authors
 
 * https://lacid.github.io/ - Lacid
