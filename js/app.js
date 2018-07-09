@@ -8,7 +8,7 @@
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
- */
+ */z
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
