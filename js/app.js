@@ -1,4 +1,4 @@
-// timer - https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
+// timer https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
 let time = 0;
 let stop = 0;
 window.onload = function() {
@@ -132,7 +132,29 @@ showCardOnClick = function(clickEvent) {
                 }
             }
         }
+        if ($('.deck').find('.match').length === 16) {
+            setTimeout(function() {
+                $('.deck').each(function() {
+                    swal({                         // sweetalert2
+                        title: 'Congratulations! You Won!',
+                        type: 'success',
+                        text: `in ${time} Seconds with ${moves} Moves and ${stars} Stars`,
+                        allowOutsideClick: false,
+                        showCancelButton: true,
+                        confirmButtonText: 'Play Again',
+                        confirmButtonColor: '#02ccba',
+                        cancelButtonText: 'Close',
+                        cancelButtonColor: '#6c6c6c'
+                    }).then(function() {
+                        location.reload();
+                    }, function(dismiss) {
+                        console.log('Yes');
+                    });
 
+                });
+            }, 300);
+            stop = 1;
+        }
     });
 };
 
