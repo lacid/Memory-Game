@@ -5,8 +5,8 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [Authors](#Authors)
-* [Sources](#Sources)
+* [Authors](#authors)
+* [Sources](#sources)
 
 ## Instructions
 
