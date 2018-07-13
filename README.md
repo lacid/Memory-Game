@@ -6,7 +6,7 @@
 
 * [Instructions](#instructions)
 * [Authors](#authors)
-* [Sources](#sources)
+* [Sources](#dependencies)
 
 ## Instructions
 
@@ -26,7 +26,8 @@ Each turn:
 
 * https://lacid.github.io/ - Lacid
 
-## Sources
+## Dependencies
 
+* https://code.jquery.com/jquery-3.2.1.min.js
 * https://sweetalert2.github.io/
 * https://mdbootstrap.com/

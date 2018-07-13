@@ -107,3 +107,22 @@ h1 {
 .restart .timer {
     margin-right: 10px;
 }
+
+/*  Media Queries  */
+
+@media only screen and (max-width: 680px) {
+    .score-panel .stars {
+        margin-left: 2em;
+    }
+    .score-panel .restart {
+        margin-right: 2em;
+    }
+    .deck {
+        width: 95vw;
+        min-height: 100vw;
+        padding: 15px;
+    }
+    .deck .card {
+        width: 19vw;
+        height: 19vw;
+    }
