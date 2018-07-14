@@ -24,7 +24,7 @@ Each turn:
 
 ## Authors
 
-* https://lacid.github.io/ - Lacid
+* https://www.github.com/lacid/ - Lacid
 
 ## Dependencies
 

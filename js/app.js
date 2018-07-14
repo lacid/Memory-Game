@@ -3,17 +3,31 @@ let cardsName = ['fa fa-diamond', 'fa fa-paper-plane-o', 'fa fa-anchor', 'fa fa-
 let cards = [];
 let openCards = [];
 
-// timer https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
-let time = 0;
-let stop = 0;
-window.onload = function() {
+// initial states
+let sec = 0,
+    min = 0,
+    moves = 0,
+    stop = 0;
+let stars = 3;
+
+// timer Self-Executing Anonymous Functions
+(function() {
     setInterval(function() {
-        if (stop !== 1) {
-            time++;
-            $('.timer').html(time);
+        if (moves !== 0 && stop !== 1) {
+            sec++;
+
+            if (sec === 60) {
+                min++;
+                sec = 0;
+            }
+            $('.timer').html(`${sec}sec`);
+
+            if (min > 0) {
+                $('.timer').html(`${min}min ${sec}sec`);
+            }
         }
     }, 1000);
-};
+})();
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -60,18 +74,13 @@ removeProperties = function(prop) {
     }, 600);
 };
 
-// initial state
-let moves = 0,
-    stars = 3;
-
 /// main onclick handler
 showCardOnClick = function(clickEvent) {
     clickEvent.on('click', function() {
-
         // add moves
         moves++;
 
-        // remove stars after some moves
+        // remove stars after moves
         if (moves === 16) {
         } else if (moves > 24 && moves <= 30) {
             $('section ul li').hide();
@@ -121,7 +130,7 @@ showCardOnClick = function(clickEvent) {
                     swal({
                         title: 'Congratulations! You Won!',
                         type: 'success',
-                        text: `in ${time} Seconds with ${moves} Moves and ${stars} Stars`,
+                        text: `in ${min} minute(s) and ${sec} seconds with ${moves} Moves and ${stars} Star(s) Woooooo!`,
                         allowOutsideClick: false,
                         showCancelButton: true,
                         confirmButtonText: 'Play Again',
@@ -133,11 +142,8 @@ showCardOnClick = function(clickEvent) {
                     }, function(dismiss) {
                         console.log('Yes');
                     });
-
                 });
             }, 300);
-
-            // stops the timer when the game is over
             stop = 1;
         }
     });
