@@ -1,4 +1,4 @@
-# Memory Game Project - Pexeso
+# Memory Game aka Pexeso
 
 * https://lacid.github.io/Memory-Game/
 
@@ -6,7 +6,7 @@
 
 * [Instructions](#instructions)
 * [Authors](#authors)
-* [Sources](#dependencies)
+* [Dependencies](#dependencies)
 
 ## Instructions
 
@@ -28,6 +28,6 @@ Each turn:
 
 ## Dependencies
 
-* https://code.jquery.com/jquery-3.2.1.min.js
 * https://sweetalert2.github.io/
 * https://mdbootstrap.com/
+* https://jquery.com/

@@ -45,7 +45,16 @@ function shuffle(array) {
     return array;
 }
 
-// add each card's HTML to the page
+// disable activate fix for not clicking more than 2 cards at once
+function disable() {
+    $('.deck').css("pointer-events", "none");
+}
+
+function active() {
+    $('.deck').css("pointer-events", "auto");
+}
+
+// add each card's HTML to the page; put it into cards array
 $('.deck').each(function() {
     $(this).find('li').each(function() {
         cards.push($(this));
@@ -113,9 +122,14 @@ showCardOnClick = function(clickEvent) {
                     console.log('match');
                     $(this).off('click');
                     openCards = [];
+                    disable();
+                    setTimeout(active, 600);
                     break;
-                } else {
+                }
+                else {
                     self.addClass('show open animated pulse');
+                    disable();
+                    setTimeout(active, 600);
                     removeProperties(self);
                     openCards[0].on('click', showCardOnClick(openCards[0]));
                     console.log('no match');
