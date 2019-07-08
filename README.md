@@ -1,6 +1,6 @@
 # Memory Game aka Pexeso
 
-* https://lacid.github.io/Memory-Game/
+* https://lacid.github.io/memory_game/
 
 ## Table of Contents
 
@@ -10,7 +10,7 @@
 
 ## Instructions
 
-To start the game go to https://lacid.github.io/Memory-Game/ or download and run index.html
+To start the game go to https://lacid.github.io/memory_game/ or download and run index.html
 
 The game board consists of sixteen "cards" arranged in a grid. The deck is made up of eight different pairs of cards, each with different symbols on one side. The cards are arranged randomly on the grid with the symbol face down. The gameplay rules are very simple: flip over two hidden cards at a time to locate the ones that match!
 
